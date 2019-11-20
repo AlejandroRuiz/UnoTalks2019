@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:UnoTalks2019.ViewModels"
+    Title="RefreshView Demo"
+    x:Class="UnoTalks2019.Views.RefreshViewDemoPage">
+    <ContentPage.BindingContext>
+        <vm:RefreshViewDemoViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RefreshView
+            IsRefreshing="{Binding IsBusy}"
+            Command="{Binding LoadMoreCommand}">
+            <CollectionView
+                ItemsSource="{Binding DataList}" />
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

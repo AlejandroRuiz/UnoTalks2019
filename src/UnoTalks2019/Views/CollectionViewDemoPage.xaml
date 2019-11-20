@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:UnoTalks2019.ViewModels"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    BackgroundColor="#E6E5E6"
+    Title="CollectionView Demo"
+    x:Class="UnoTalks2019.Views.CollectionViewDemoPage">
+    <ContentPage.BindingContext>
+        <vm:CollectionViewDemoViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RefreshView
+            RefreshColor="Orange"
+            BackgroundColor="#E6E5E6"
+            IsRefreshing="{Binding IsBusy}"
+            Command="{Binding LoadMoreCommand}">
+            <CollectionView
+                ItemsSource="{Binding DataList}">
+
+                <!--<CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        VerticalItemSpacing="10"
+                        HorizontalItemSpacing="10"
+                        Orientation="Vertical"
+                        Span="2" />
+                </CollectionView.ItemsLayout>-->
+
+                <CollectionView.EmptyView>
+                    <Label
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="No Data :("
+                        FontSize="Title"
+                        FontAttributes="Bold"/>
+                </CollectionView.EmptyView>
+
+                <!--<CollectionView.Header>
+                    <BoxView HeightRequest="10" />
+                </CollectionView.Header>-->
+
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            HeightRequest="300">
+                             <Image Aspect="AspectFill"
+                                    Source="{Binding ImageUrl}" />
+                             <BoxView Color="Black"
+                                      Opacity=".5" />
+                            <StackLayout VerticalOptions="End"
+                                         Margin="20,20,60,20"
+                                         Spacing="0">
+                                <Label TextColor="White"
+                                       FontSize="Subtitle"
+                                       Text="{Binding Name}" />
+                                <BoxView Margin="0,20"
+                                         HorizontalOptions="Start"
+                                         HeightRequest="3"
+                                         WidthRequest="50"
+                                         Color="White" />
+                                <Label Margin="0,0,0,5"
+                                       FontSize="Subtitle"
+                                       TextColor="White"
+                                       Text="{Binding Subtitle}" />
+                                <Label FontSize="Caption"
+                                       TextColor="White"
+                                       Text="{Binding Description}" />
+                            </StackLayout>
+                             <ImageButton Margin="20"
+                                          BackgroundColor="Transparent"
+                                          Aspect="AspectFit"
+                                          Source="play_circle_filled_white"
+                                          VerticalOptions="End"
+                                          HorizontalOptions="End"
+                                          HeightRequest="35"
+                                          WidthRequest="35" />
+                         </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <!--<CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <pancake:PancakeView
+                            Elevation="5">
+                            <Grid
+                                BackgroundColor="White"
+                                VerticalOptions="Start"
+                                HeightRequest="230"
+                                Margin="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="70*" />
+                                    <RowDefinition
+                                        Height="20*" />
+                                </Grid.RowDefinitions>
+                                <Image
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Aspect="AspectFill"
+                                    Source="{Binding ImageUrl}" />
+                                <BoxView
+                                    Grid.Row="1"
+                                    Opacity=".8"
+                                    Color="Black" />
+                                <Label
+                                    Grid.Row="1"
+                                    Margin="10,0"
+                                    TextColor="White"
+                                    FontSize="Subtitle"
+                                    VerticalTextAlignment="Center"
+                                    Text="{Binding Name}" />
+                            </Grid>
+                        </pancake:PancakeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>-->
+            </CollectionView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

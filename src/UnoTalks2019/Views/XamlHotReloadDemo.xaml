@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d"
+    BackgroundColor="#E6E5E6"
+    Title="Boarding Pass"
+    x:Class="UnoTalks2019.Views.XamlHotReloadDemo">
+    <ContentPage.Content>
+        <ScrollView>
+            <pancake:PancakeView
+                Elevation="5"
+                Margin="20"
+                CornerRadius="30,0,0,30"
+                BackgroundColor="White">
+                <StackLayout Spacing="0" >
+                    <Grid>
+                        <BoxView
+                            HeightRequest="100"
+                            Color="#631E53" />
+                        <Label
+                            VerticalTextAlignment="Center"
+                            Margin="30,0"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="Title"
+                            Text="GDL -> MEX" />
+                    </Grid>
+
+                    <Grid
+                        Padding="20,10,20,0"
+                        ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout
+                            Grid.Column="0"
+                            Spacing="0">
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                TextColor="#943581"
+                                FontSize="35"
+                                Text="GDL" />
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                FontSize="Small"
+                                TextColor="Black"
+                                Text="Guadalajara," />
+                            <Label
+                                FontSize="Small"
+                                HorizontalTextAlignment="Center"
+                                TextColor="Black"
+                                Text="Mexico" />
+                        </StackLayout>
+                        <StackLayout
+                            Grid.Column="1"
+                            VerticalOptions="Center"
+                            Spacing="10">
+                            <Image
+                                HeightRequest="30"
+                                Source="airplane" />
+                           <Label
+                               HorizontalTextAlignment="Center"
+                               FontSize="Micro"
+                               Text="1 hr(s) 20 min"/>
+                        </StackLayout>
+                        <StackLayout
+                            Grid.Column="2"
+                            Spacing="0">
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                TextColor="#943581"
+                                FontSize="35"
+                                Text="MEX" />
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                TextColor="Black"
+                                Text="Mexico City," />
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                TextColor="Black"
+                                Text="Mexico" />
+                        </StackLayout>
+                    </Grid>
+
+                    <BoxView
+                        Margin="20"
+                        Color="#B97EC9"
+                        HeightRequest="1" />
+
+                    <Grid
+                        Padding="20,0"
+                        ColumnSpacing="0"
+                        RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="3*" />
+                            <ColumnDefinition
+                                Width="5*" />
+                            <ColumnDefinition
+                                Width="3*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                           <RowDefinition
+                               Height="Auto"/>
+                            <RowDefinition
+                               Height="Auto"/>
+                            <RowDefinition
+                               Height="Auto"/>
+                            <RowDefinition
+                               Height="Auto"/>
+                            <RowDefinition
+                               Height="Auto"/>
+                            <RowDefinition
+                               Height="Auto"/>
+                            <RowDefinition
+                               Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Passenger" />
+                        <Label
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Grid.Row="1"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="Mr. Juan Perez" />
+
+                        <Label
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Seat" />
+                        <Label
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="4 C" />
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Margin="0,30,0,0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Flight" />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="Y4 123" />
+
+                        <Label
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Margin="0,30,0,0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Departure" />
+                        <Label
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="October 23 2019" />
+
+                        <Label
+                            Grid.Column="2"
+                            Grid.Row="2"
+                            Margin="0,20,0,0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            VerticalTextAlignment="End"
+                            Text="Hour" />
+                        <Label
+                            Grid.Column="2"
+                            Grid.Row="3"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="10:30 PM" />
+
+                        <BoxView
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"
+                            Margin="0,20"
+                            Color="#B97EC9"
+                            HeightRequest="1" />
+
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="5"
+                            Margin="0,20,0,0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Terminal" />
+                        <Label
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="1" />
+
+                        <Label
+                            Grid.Column="1"
+                            Grid.Row="5"
+                            Margin="0,20,0,0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Gate" />
+                        <Label
+                            Grid.Column="1"
+                            Grid.Row="6"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="45" />
+
+                        <Label
+                            Grid.Column="2"
+                            Grid.Row="5"
+                            Margin="0,20,0,0"
+                            TextColor="#943581"
+                            FontSize="Small"
+                            Text="Boarding" />
+                        <Label
+                            Grid.Column="2"
+                            Grid.Row="6"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            Text="9:30 PM" />
+                    </Grid>
+
+                    <Image
+                        VerticalOptions="EndAndExpand"
+                        Source="qrcode" />
+                </StackLayout>
+            </pancake:PancakeView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

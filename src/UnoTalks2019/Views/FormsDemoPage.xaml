@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:UnoTalks2019.ViewModels"
+    x:Class="UnoTalks2019.Views.FormsDemoPage">
+    <ContentPage.BindingContext>
+        <vm:FormsDemoViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Center">
+            <Button
+                Text="CollectionView"
+                Command="{Binding GoToCollectionViewCommand}" />
+            <Button
+                Text="RefreshView"
+                Command="{Binding GoToRefreshViewCommand}" />
+            <Button
+                Text="Html Label"
+                Command="{Binding GoToHtmlLabelCommand}" />
+            <Button
+                Text="CarouselView"
+                Command="{Binding GoToCarouselViewCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
